@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="search">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../paradigms-2020/artifacts/search/BinarySearchSpanTest.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../paradigms-2020/artifacts/search/BinarySearchShiftTest.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../paradigms-2020/artifacts/search/BinarySearchMissingTest.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../paradigms-2020/artifacts/search/BinarySearchTest.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

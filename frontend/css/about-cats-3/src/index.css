@@ -1,0 +1,245 @@
+html {
+  --infoMargin: 4px 0 4px 5px;
+  --cardMargin: 5px;
+  --myBorder: solid lightgrey 2px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+header,
+footer {
+  background-color: white;
+}
+header {
+  position: sticky;
+  width: 100%;
+}
+footer {
+  position: fixed;
+  bottom: 0;
+
+  width: 100%;
+
+  vertical-align: bottom;
+}
+.outer {
+  z-index: 100;
+
+  border-top: var(--myBorder);
+  border-bottom: var(--myBorder);
+}
+.header.outer {
+  top: 0;
+
+  height: fit-content;
+  text-align: center;
+}
+
+.header.inner {
+  top: 0;
+
+  font-family: PTSans-Narrow, sans-serif;
+  font-size: 32px;
+  height: fit-content;
+  margin: 0;
+  padding: 5px;
+}
+.footer.outer {
+  bottom: 0;
+
+  height: fit-content;
+}
+.footer.inner {
+  bottom: 0;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  height: fit-content;
+  padding: 5px;
+}
+
+.footer a {
+  color: #4c4cd8;
+  font-family: Arial, serif;
+  text-decoration: none;
+}
+
+.header.inner:first-letter {
+  color: red;
+}
+
+.footer .left {
+  width: 150px;
+  float: left;
+}
+
+.footer .right {
+  width: auto;
+  height: fit-content;
+  position: absolute;
+  right: 5px;
+  bottom: 0;
+}
+.info {
+  margin: 5px 0;
+}
+.right.info {
+  display: flex;
+
+  margin: 0;
+}
+.catList {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 75px;
+}
+
+.catCard {
+  display: flex;
+  flex-direction: column;
+
+  width: 240px;
+
+  height: 400px;
+
+  margin: var(--cardMargin);
+
+  border: 3px solid lightgrey;
+}
+
+.catName,
+.catInfo {
+  overflow: hidden;
+
+  margin-left: 5px;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+
+  display: block;
+
+  width: 100%;
+}
+
+.catName {
+  display: block;
+
+  color: black;
+
+  font-size: 2em;
+
+  text-decoration: none;
+}
+
+.catInfo {
+  overflow: hidden;
+
+  color: gray;
+  width: 98%;
+}
+
+.catInfoLine {
+  margin: var(--infoMargin);
+}
+.catImage {
+  width: 240px;
+  height: 180px;
+}
+
+.catInfoHidden {
+  display: none;
+}
+
+.catCard:hover {
+  border-color: black;
+}
+.catName:hover {
+  color: red;
+}
+
+.catImage:hover {
+  box-shadow: 1px 5px 0 red;
+}
+.catInfoDesk {
+  display: none;
+}
+
+@media screen and (min-width: 375px) and (max-width: 729px) {
+  .footer .right {
+    position: static;
+  }
+  .header.inner {
+    font-size: 20px;
+    padding: 2px;
+  }
+
+  .footer.inner {
+    font-size: 1rem;
+  }
+  .footer.inner, .catList {
+    flex-direction: column;
+  }
+  .catCard {
+    height: 220px;
+    width: 180px;
+    border: 1px solid lightgrey;
+  }
+  .catImage {
+    height: 100px;
+    width: 180px;
+  }
+  .catName {
+    font-size: 1.5rem;
+  }
+  .catInfo {
+    font-size: 0.75rem;
+  }
+}
+
+@media screen and (min-width: 730px) and (max-width: 1199px) {
+}
+
+@media screen and (min-width: 1200px) {
+  .catCard {
+    width: 420px;
+    height: 300px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    flex-wrap: wrap;
+  }
+  .catList {
+    width: 1100px;
+  }
+  .footer .left {
+    width: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+  }
+  .info {
+    margin: 5px 0 5px 15px;
+    font-size: 1.1rem;
+  }
+  .catInfo {
+    height: 180px;
+    width: 170px;
+  }
+  .catInfoDesk {
+    border-top: solid lightgrey 2px;
+    grid-column: 1/3;
+    display: block;
+    width: 410px;
+    margin: 15px 0;
+    padding: 5px;
+  }
+}

@@ -1,0 +1,243 @@
+:root {
+    --border-color: rgb(185, 185, 185);
+    --border-radius: 6px;
+    --black-color: #333;
+    --caption-color: #3B5998;
+    color: var(--black-color);
+    font-family: Verdana, sans-serif;
+    font-size: 16px;
+}
+
+html {
+    padding: 1rem;
+    min-width: 600px;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+    :root {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 800px) {
+    :root {
+        font-size: 12px;
+    }
+}
+
+header {
+    position: relative;
+}
+
+header .languages {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+header .enter-or-register-box {
+    position: absolute;
+    top: 32px;
+    right: 0;
+}
+
+header nav {
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 0.75rem 0.25rem;
+    margin-top: 1rem;
+}
+
+header nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin-left: 1rem;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: var(--black-color);
+    font-family: "Arial Narrow", sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.middle {
+    margin-top: 1rem;
+    overflow: auto;
+}
+
+aside {
+    float: right;
+    width: 20rem;
+}
+
+main {
+    margin-right: 21rem;
+}
+
+footer {
+    margin-top: 2rem;
+    border-top: 1px solid var(--border-color);
+    padding-top: 0.5rem;
+    text-align: center;
+}
+
+aside section {
+    border: 1px solid var(--border-color);
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+}
+
+aside section .header {
+    border-bottom: 1px solid var(--border-color);
+    padding: 0.25rem;
+    font-weight: bold;
+    color: var(--caption-color);
+}
+
+aside section .header:before {
+    content: "→";
+}
+
+aside section .body {
+    padding: 1rem;
+}
+
+aside section .footer {
+    border-top: 1px solid var(--border-color);
+    overflow: auto;
+    padding: 0.25rem;
+}
+
+aside section .footer a {
+    float: right;
+    font-size: 0.75rem;
+}
+
+aside section .footer a:after {
+    content: " →";
+}
+
+.datatable td, main .caption, .datatable th {
+    border: 1px solid #e5e5e5;
+    font-size: 0.7rem;
+    letter-spacing: 0.2px;
+    font-family: verdana,arial,sans-serif;
+}
+
+*{
+    box-sizing: border-box;
+}
+div table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.datatable tr, .caption {
+    width: 100%;
+}
+
+main .caption {
+    font-size: 0.9rem;
+    background-color: #e5e5e5;
+    padding: 2px 2px 2px 8px;
+    border-radius: 5px 5px 0 0;
+}
+
+.datatable tr td, .datatable th {
+    text-align: center;
+    padding: 7px;
+}
+
+main .datatable tbody tr:nth-child(odd) {
+    background-color: #f3f3f3;
+}
+
+aside .caption {
+    font-size: 1.1rem;
+    padding: 2px 2px 2px 8px;
+    border-radius: 5px 5px 0 0;
+    border-bottom: 1px solid var(--border-color);
+    height: 2rem;
+    color: #3B5998;
+    font-weight: bold;
+}
+aside .datatable tbody tr:nth-child(even) {
+    background-color: #f3f3f3;
+}
+
+aside .info {
+    margin-bottom: 1.8rem;
+}
+.propertyLinks li {
+    list-style-type: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 1rem;
+}
+
+aside .info .personal-sidebar {
+    display:flex;
+    flex-direction: row-reverse;
+}
+.for-avatar {
+    margin: 1rem;
+}
+.avatar {
+    text-align: center;
+}
+.avatar a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+.personal-links {
+    margin-left: 1rem;
+    justify-content:left;
+}
+aside ul {
+    padding-inline-start: 5px;
+}
+
+aside .caption {
+    padding: 4px;
+}
+
+aside .datatable {
+    border: var(--border-color);
+}
+
+aside .datatable .bottom-links td {
+    border: none;
+}
+
+aside .datatable > table a {
+    text-decoration: none;
+    color: red;
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+aside .datatable > table a span {
+    color: black;
+}
+
+aside .datatable td {
+    font-size: 0.95rem;
+}
+
+aside .datatable .bottom-links tr {
+    background-color:#f3f3f3;
+}
+
+aside .datatable .bottom-links td {
+    display: inline-flex;
+}

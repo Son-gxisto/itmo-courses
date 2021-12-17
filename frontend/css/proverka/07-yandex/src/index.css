@@ -1,0 +1,411 @@
+:root {
+  --blue: #0054b9;
+  --light-blue: #6daae8;
+  --yellow: #ffdb4d;
+}
+
+@font-face {
+  font-family: "PT SansNarrow";
+  src: url("ptsansnarrow/sansnarrow.ttf");
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body * {
+  transition: none;
+}
+
+html {
+  font-size: 16px;
+}
+
+.wrapper {
+  display: grid;
+  gap: 30px;
+  /* row-gap: 50px; */
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.wrapper_start_3_span_5 {
+  grid-column: 3 / span 5;
+}
+
+.wrapper_start_8_span_2 {
+  grid-column: 8 / span 2;
+}
+
+.wrapper_start_1_span_12 {
+  grid-column: 1 / span 12;
+}
+
+.wrapper_start_1_span_12 {
+  grid-column: 1 / span 12;
+}
+
+.wrapper_start_3_span_7 {
+  grid-column: 3 / span 7;
+}
+
+.wrapper_start_3_span_8 {
+  grid-column: 3 / span 8;
+}
+
+/* ---------- HEADER ---------- */
+.header__settings {
+  grid-column: 9 / span 2;
+  position: relative;
+}
+
+.header__location {
+  grid-column: 1 / span 2;
+}
+
+.header__settings, .header__location {
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.header .box {
+  grid-column: 11 / span 2;
+}
+
+.header__settings-checkbox {
+  display: none;
+}
+
+.header__settings-label {
+  cursor: pointer;
+}
+
+.header__settings-popup {
+  display: none;
+  position: absolute;
+  opacity: 0;
+  width: 150px;
+  background-color: white;
+  font-size: 0.9rem;
+  text-align: left;
+  padding-left: 5px;
+  padding-right: 5px;
+  right: 20px;
+  z-index: 1;
+  transition: opacity ease-in-out 0.1s;
+}
+
+.header__settings-checkbox:checked ~ .header__settings-popup {
+  display: block;
+  opacity: 1;
+}
+
+/* ---------- BOX ---------- */
+.box {
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+
+.box__header, .box__content {
+  margin-left: 10px;
+}
+
+.box__header {
+  font-weight: bold;
+}
+
+.box__header::first-letter {
+  color: red;
+
+}
+
+/* ---------- CAPTION ---------- */
+.caption {
+  color: gray;
+  text-decoration: none;
+}
+
+.caption_bold {
+  font-weight: bold;
+  color: black;
+}
+
+.caption_black {
+  color: black;
+}
+
+.caption_size_small {
+  font-size: 0.85rem;
+}
+
+.caption_normal {
+  font-weight: normal;
+}
+
+.caption_blue {
+  color: var(--light-blue);
+}
+
+.caption_clickable {
+  cursor: pointer;
+}
+
+/* ---------- CONTENT-BLOCK ---------- */
+.content-block {
+  font-size: 0.87rem;
+  position: relative;
+}
+
+.content-block__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.content-block__items {
+  padding-left: 0;
+}
+
+.content-block__item {
+  margin: 10px 0;
+}
+
+.content-block__img {
+  width: 100%;
+}
+
+.content-block__icon, .icon {
+  height: 1.5rem;
+}
+
+.content-block__img_size_small {
+  width: 50%;
+}
+
+.content-block_width_95 {
+  width: 95%;
+}
+
+.content-block__content_limited {
+  max-height: 250px;
+  overflow-y: scroll;
+}
+
+/* ---------- ONE-LINE-BLOCK ---------- */
+.one-line-block {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* ---------- SEARCH ---------- */
+.search {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.search__title {
+  grid-column: 1 / span 2;
+  font-size: 3rem;
+  line-height: 3rem;
+  text-align: right;
+  font-family: "PT SansNarrow";
+  padding-right: 10px;
+}
+
+.search__title::first-letter {
+  color: red;
+}
+
+.search__main-part {
+  grid-column: 1 / span 12;
+  gap: 0;
+}
+
+.search__input {
+  grid-column: 3 / span 6;
+  height: 1.5rem;
+  outline: none;
+  padding: 5px 10px;
+  font-size: 1.2rem;
+  border: 2px solid var(--yellow);
+  border-right: none;
+}
+
+.search__icons {
+  grid-column: 9 / span 1;
+  border-top: 2px solid var(--yellow);
+  border-bottom: 2px solid var(--yellow);
+  height: calc(1.5rem + 10px);
+}
+
+.search__icons {
+  display: flex;
+  align-items: center;
+  flex-flow: row-reverse;
+}
+
+.search__icon {
+  height: 70%;
+  padding-right: 10px;
+  transition: transform ease-in-out 0.1s;
+  cursor: pointer;
+}
+
+.search__icon:hover {
+  transform: scale(1.08);
+}
+
+.search__icons, .search__input {
+  align-self: end;
+}
+
+.search__title {
+  align-self: baseline;
+}
+
+.search__secondary-text {
+  grid-row: 3 / span 1;
+  grid-column: 3 / span 7;
+  margin-top: 5px;
+}
+
+.search__button {
+  grid-column: 10 / span 1;
+  align-self: end;
+  display: flex;
+}
+
+.search__triangle {
+  content: '';
+  width: 0;
+  height: 0;
+  border-top: calc(0.75rem + 7px) solid transparent;
+  border-left: 0.7rem solid var(--yellow);
+  border-bottom: calc(0.75rem + 7px) solid transparent;
+}
+
+.search__button button {
+  background-color: var(--yellow);
+  height: calc(1.5rem + 14px);
+  cursor: pointer;
+  font-size: 1.2rem;
+  border: 2px solid var(--yellow);
+  outline: none;
+}
+
+.search__button button:active {
+  background-color: #f6c707;
+  border-color: #f6c707;
+}
+
+.search__button button:active ~ .search__triangle {
+  border-left-color: #f6c707;
+}
+
+/* ---------- MAIN-CONTENT-SECTION ---------- */
+.main-content-section {
+  display: grid;
+  gap: 50px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* ---------- HEADERS ---------- */
+.primary-header, .secondary-header {
+  color: var(--blue);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.5em;
+  transition: color ease-in-out 0.1s;
+  margin-bottom: 10px;
+}
+
+.secondary-header {
+  color: var(--light-blue);
+}
+
+.primary-header:hover, .secondary-header:hover {
+  color: rgba(226, 56, 56, 0.842);
+}
+
+.primary-header_size_small {
+  font-weight: normal;
+  font-size: 1em;
+}
+
+/* .margin_20 {
+    margin-top: 20px;
+} */
+.top-shadow, .bottom-shadow {
+  width: 100%;
+  height: 30px;
+  position: absolute;
+  background: linear-gradient(to top, transparent, 50%, white);
+}
+
+.bottom-shadow {
+  bottom: 0;
+  background: linear-gradient(to top, white, 50%, transparent);
+}
+
+/* TOGGLERS  */
+.joke, .jokes-toggler {
+  display: none;
+}
+
+#one:checked ~ .one,
+#two:checked ~ .two,
+#three:checked ~ .three,
+#four:checked ~ .four,
+#five:checked ~ .five {
+  display: block;
+}
+
+/* WIDGETS  */
+.widget-checkbox {
+  display: none;
+}
+
+#checkbox1:checked ~ .header label[for="checkbox1"],
+#checkbox2:checked ~ .header label[for="checkbox2"],
+#checkbox3:checked ~ .header label[for="checkbox3"],
+#checkbox4:checked ~ .header label[for="checkbox4"],
+#checkbox5:checked ~ .header label[for="checkbox5"],
+#checkbox6:checked ~ .header label[for="checkbox6"],
+#checkbox7:checked ~ .header label[for="checkbox7"] {
+  font-weight: bold;
+  color: green;
+}
+
+#checkbox1:not(:checked) ~ .wrapper .widget-content-1,
+#checkbox2:not(:checked) ~ .wrapper .widget-content-2,
+#checkbox3:not(:checked) ~ .wrapper .widget-content-3,
+#checkbox4:not(:checked) ~ .wrapper .widget-content-4,
+#checkbox5:not(:checked) ~ .wrapper .widget-content-5,
+#checkbox6:not(:checked) ~ .wrapper .widget-content-6,
+#checkbox7:not(:checked) ~ .wrapper .widget-content-7 {
+  display: none;
+}
+
+/* hide first only */
+#checkbox1:not(:checked) ~ #checkbox2:not(:checked) ~ #checkbox3:checked ~ .wrapper .content-block_second,
+#checkbox1:not(:checked) ~ #checkbox2:not(:checked) ~ #checkbox4:checked ~ .wrapper .content-block_second,
+#checkbox1:not(:checked) ~ #checkbox2:not(:checked) ~ #checkbox3:not(:checked) ~ #checkbox4:not(:checked)
+~ .wrapper .content-block_third {
+  grid-column: 1 / span 1;
+}
+
+#checkbox1:checked ~ #checkbox3:not(:checked) ~ #checkbox4:not(:checked) ~ .wrapper .content-block_third,
+#checkbox2:checked ~ #checkbox3:not(:checked) ~ #checkbox4:not(:checked) ~ .wrapper .content-block_third {
+  grid-column: 2 / span 1;
+}
+
+#checkbox1:not(:checked) ~ #checkbox2:not(:checked) ~ #checkbox3:checked ~ .wrapper .content-block_first,
+#checkbox1:not(:checked) ~ #checkbox2:not(:checked) ~ #checkbox4:checked ~ .wrapper .content-block_first,
+#checkbox1:checked ~ #checkbox3:not(:checked) ~ #checkbox4:not(:checked) ~ .wrapper .content-block_second,
+#checkbox2:checked ~ #checkbox3:not(:checked) ~ #checkbox4:not(:checked) ~ .wrapper .content-block_second,
+#checkbox1:not(:checked) ~ #checkbox2:not(:checked) ~ #checkbox3:not(:checked) ~ #checkbox4:not(:checked)
+~ .wrapper .content-block_second,
+#checkbox1:not(:checked) ~ #checkbox2:not(:checked) ~ #checkbox3:not(:checked) ~ #checkbox4:not(:checked)
+~ .wrapper .content-block_first {
+  display: none;
+}

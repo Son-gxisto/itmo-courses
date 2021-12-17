@@ -1,0 +1,17 @@
+<component name="libraryTable">
+  <library name="queue">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../paradigms-2020/artifacts/queue/QueueFunctionsTest.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../paradigms-2020/artifacts/queue/ArrayQueueTest.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../paradigms-2020/artifacts/queue/ArrayQueueIndexedDequeTest.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../paradigms-2020/artifacts/queue/QueueToArrayTest.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../paradigms-2020/artifacts/queue/QueueTest.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../paradigms-2020/artifacts/queue/ArrayQueueDequeTest.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../paradigms-2020/artifacts/queue/QueueIfWhileTest.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../paradigms-2020/artifacts/queue/ArrayQueueToArrayTest.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../paradigms-2020/artifacts/queue/ArrayQueueToStrTest.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

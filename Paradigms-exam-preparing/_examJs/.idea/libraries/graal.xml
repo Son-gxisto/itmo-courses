@@ -1,0 +1,21 @@
+<component name="libraryTable">
+  <library name="graal">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../paradigms-2020/javascript/graal/asm-commons-7.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../paradigms-2020/javascript/graal/js-20.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../paradigms-2020/javascript/graal/truffle-api.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../paradigms-2020/javascript/graal/asm-tree-7.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../paradigms-2020/javascript/graal/asm-util-7.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../paradigms-2020/javascript/graal/launcher-common.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../paradigms-2020/javascript/graal/js-scriptengine-20.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../paradigms-2020/javascript/graal/asm-7.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../paradigms-2020/javascript/graal/graaljs-launcher.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../paradigms-2020/javascript/graal/icu4j.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../paradigms-2020/javascript/graal/asm-analysis-7.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../paradigms-2020/javascript/graal/graal-sdk.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../paradigms-2020/javascript/graal/tregex.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

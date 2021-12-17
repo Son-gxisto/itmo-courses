@@ -1,0 +1,133 @@
+/* TODO */
+
+html {
+  --infoMargin: 4px 0;
+  --cardMargin: 10px;
+}
+
+.catList {
+  width: 100%;
+  height: fit-content;
+}
+
+.catCard {
+  display: inline-block;
+
+  width: 240px;
+
+  height: 400px;
+
+  margin: var(--cardMargin);
+
+  border: 3px solid lightgrey;
+}
+
+.catName,
+.catInfo {
+  overflow: hidden;
+
+  margin-left: 15px;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+}
+
+.catName {
+  display: block;
+
+  color: black;
+
+  font-size: 2em;
+
+  text-decoration: none;
+}
+
+.catInfo {
+  overflow: hidden;
+
+  color: gray;
+}
+
+.catInfoLine {
+  margin: var(--infoMargin);
+}
+.catImage {
+  width: 240px;
+  height: 180px;
+}
+
+.catInfoHidden {
+  display: none;
+}
+
+.catCard:hover {
+  border-color: black;
+}
+.catName:hover {
+  color: red;
+}
+
+.catImage:hover {
+  box-shadow: 1px 5px 0 red;
+}
+
+.catInfoLine:hover,
+.catInfoHidden:hover,
+.catStatus:hover {
+  color: blue;
+}
+
+/* catList - один checkbox, для которого мы прописываем много уникальных свойств
+ нет смысла делать класс для единственного элемента, а выбирать все инпуты не вариант*/
+
+#catList {
+  display: none;
+}
+
+label[for='catList'] {
+  display: block;
+
+  width: 50px;
+  height: 50px;
+
+  margin: var(--cardMargin);
+
+  background: url('img/hoverHor.png') no-repeat;
+}
+
+#catList + span {
+  display: inline-block;
+}
+
+#catList:checked ~ div.catCard {
+  display: block;
+}
+
+#catList:checked ~ .catCard .catInfo .catStatus,
+#catList:checked ~ .catCard .catInfo .catInfoLine {
+  display: none;
+}
+
+#catList:checked ~ .catCard .catInfo .catInfoAge,
+#catList:checked ~ .catCard .catInfo .catInfoHidden {
+  display: block;
+
+  margin: var(--infoMargin);
+
+  white-space: normal;
+}
+
+#catList:checked ~ .catCard .catImage {
+  width: 480px;
+  height: 360px;
+}
+
+#catList:checked ~ .catCard {
+  width: 480px;
+  height: 640px;
+}
+
+#catList:checked + label[for='catList'] {
+  background: url('img/hoverVert.png');
+}

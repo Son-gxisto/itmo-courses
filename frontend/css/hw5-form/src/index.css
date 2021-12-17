@@ -1,0 +1,68 @@
+.hidden {
+  visibility: visible;
+}
+body, select#level, .hack, #another {
+  background-color: black;
+  color: aqua;
+  border-color: aqua;
+  font-size: 1.1em;
+  font-family: "Franklin Gothic Medium", serif;
+}
+.hack {
+  margin: 0 5px;
+}
+body {
+  display: flex;
+}
+option:hover {
+  background-color: black;
+  color: aqua;
+}
+
+.container, .console {
+  display: flex;
+  justify-content: flex-start;
+}
+.console {
+  list-style-type: none;
+}
+
+.hackForm {
+  display: flex;
+  width: 500px;
+  height: 400px;
+  flex-direction: column;
+}
+
+.topContainer {
+  display: flex;
+  margin-bottom: 10px;
+}
+.send {
+  width: 150px;
+  height: fit-content;
+}
+textarea#another {
+  width: 200px;
+  height: 100px;
+  resize: none;
+}
+
+.hacker {
+  margin: 50px 0 0 50px;
+  border: aqua 2px inset;
+}
+
+.hackForm label, .hackForm textarea {
+  display: flex;
+  margin: 5px 0 5px 10px;
+}
+
+.hackForm .title {
+  width: 100%;
+  text-align: center;
+}
+
+#weight {
+  width: 150px;
+}

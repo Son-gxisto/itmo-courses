@@ -1,0 +1,119 @@
+html {
+  --infoMargin: 4px 0 4px 5px;
+  --cardMargin: 5px;
+  --myBorder: solid lightgrey 2px;
+}
+body {
+  width: 100%;
+  height: 100%;
+  max-width: 700px;
+  margin: auto;
+}
+.list {
+  padding: 5px;
+  margin: 0 0 20px 0;
+}
+li .pigItem {
+  list-style-type: none;
+}
+li::marker {
+  content: none;
+}
+.pigItem .image,
+.pigItem .card, .container {
+  width: 100%;
+}
+.container {
+  height: 0;
+  padding-bottom: 100%;
+}
+.image {
+  height: 100%;
+}
+.pigItem .card {
+  margin: 0;
+  position: relative;
+  text-align: center;
+}
+.pigItem .image {
+  position: absolute;
+  top:0;
+  left:50%;
+  transform:translate(-50%);
+  object-fit:cover;
+}
+.pigItem .info {
+  position: absolute;
+  top: 70%;
+  left: 10%;
+  color: white;
+  text-shadow: 1px 1px 2px black;
+}
+.pigItem h3, .pigItem .age {
+  margin: 0;
+}
+
+.pigItem {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.pigItem:first-child {
+  display: block;
+  opacity: 1;
+}
+
+header {
+  background-color: black;
+  color: white;
+  width: auto;
+}
+
+.outer {
+  z-index: 100;
+}
+.header.outer {
+  top: 0;
+
+  height: fit-content;
+  text-align: center;
+}
+
+.header.inner {
+  top: 0;
+
+  font-family: PTSans-Narrow, sans-serif;
+  font-size: 2rem;
+  height: fit-content;
+  margin: 0;
+  padding: 5px;
+}
+
+.info {
+  margin: 5px 0;
+  font-size: 2rem;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.tiButton, .tiButton:active, .tiButton:focus {
+  width: 70px;
+  height: 70px;
+  background-size: 50px 50px;
+  position: relative;
+  border: 0;
+  outline: none;
+  background-color: white;
+}
+.button.img {
+  width: 60px;
+  height: 60px;
+  transition-property: width, height, left, top;
+  transition-duration: 0.25s;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}

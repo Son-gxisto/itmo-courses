@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>form</title>
+  <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+<form action="#" method="post" class="hackForm">
+  <h2 class="title">Прокачай навыки взлома</h2>
+  <div class="topContainer">
+    <label for="level"><select id="level" name="level">
+      <option>Текущий уровень взлома</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">Больше 5</option>
+    </select></label>
+  </div>
+  <div class="topContainer">
+    <label for="weight">
+      ваш опыт <input type="number" id="weight" class="hack">наносекунд</label>
+  </div>
+  <div class="topContainer">
+    <p class="text">Взломаем сервера csc?</p>
+    <ul class="console">
+      <li class="choice">
+        <label class="radio">
+          Да <input type="radio" name="answer" value="true" class="hack csc">
+        </label>
+      </li>
+      <li class="choice">
+        <label>
+          Нет <input type="radio" name="answer" value="false" class="hack csc">
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div class="topContainer">
+    <p class="choice text">Хочу однажды взломать:</p>
+    <label for="isu" class="choice"><input type="checkbox" id="isu" name="isu" class="hidden hack">Ису
+      Итмо</label>
+    <label for="google" class="choice"><input type="checkbox" id="google" name="google"
+                                              class="hidden hack">Гугл</label>
+    <label for="sber" class="choice"><input type="checkbox" id="sber" name="sber"
+                                            class="hidden hack">Сбербанк чтобы накрутить
+      денег</label>
+  </div>
+  <div class="topContainer">
+    <label for="another">
+      Другие пожелания:
+      <textarea id="another"></textarea>
+    </label>
+  </div>
+
+  <button type="submit" class="hack send">Отправить</button>
+</form>
+<img src="res/img/hack.jpg" alt="hackerman" class="hacker">
+</body>
+</html>

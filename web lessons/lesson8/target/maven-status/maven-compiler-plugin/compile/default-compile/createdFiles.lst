@@ -1,0 +1,12 @@
+ru\itmo\wp\WpApplication.class
+ru\itmo\wp\repository\UserRepository.class
+ru\itmo\wp\service\UserService.class
+ru\itmo\wp\form\UserCredentials.class
+ru\itmo\wp\controller\Page.class
+ru\itmo\wp\controller\IndexPage.class
+ru\itmo\wp\domain\User.class
+ru\itmo\wp\form\validator\UserCredentialsRegisterValidator.class
+ru\itmo\wp\controller\RegisterPage.class
+ru\itmo\wp\controller\UsersPage.class
+ru\itmo\wp\form\validator\UserCredentialsEnterValidator.class
+ru\itmo\wp\controller\EnterPage.class

@@ -1,0 +1,324 @@
+@font-face {
+  font-family: 'PTSans-Narrow';
+  font-style: normal;
+  font-weight: normal;
+  src: url('font/PTSans-Narrow.svg#PTSans-Narrow') format('svg'),
+    url('font/PTSans-Narrow.ttf') format('truetype'), url('font/PTSans-Narrow.woff') format('woff');
+  src: url('font/PTSans-Narrow.eot');
+}
+
+html {
+  --infoMargin: 4px 0;
+  --cardMargin: 10px;
+  height: 100%;
+}
+
+header,
+footer {
+  background-color: white;
+}
+header {
+  position: sticky;
+}
+footer {
+  position: fixed;
+  bottom: 0;
+
+  width: 100%;
+  margin-top: auto;
+
+  vertical-align: bottom;
+}
+.outer {
+  z-index: 100;
+
+  border-top: solid lightgrey 2px;
+  border-bottom: solid lightgrey 2px;
+}
+.header.outer {
+  top: 0;
+
+  height: fit-content;
+
+  font-family: PTSans-Narrow, sans-serif;
+  font-size: 32px;
+  text-align: center;
+}
+
+.header.inner {
+  top: 0;
+
+  height: fit-content;
+  margin: 0;
+  padding: 5px;
+}
+.footer.outer {
+  bottom: 0;
+
+  height: fit-content;
+}
+.footer.inner {
+  bottom: 0;
+
+  display: -webkit-box;
+
+  height: fit-content;
+  padding: 5px;
+}
+.footer * {
+  display: block;
+}
+.footer a {
+  color: #4c4cd8;
+  font-family: Arial, serif;
+  text-decoration: none;
+}
+
+.header.inner:first-letter {
+  color: red;
+}
+
+.footer .left,
+.footer .right {
+  width: 200px;
+}
+
+.footer .left {
+  float: left;
+}
+
+.footer .right {
+  float: right;
+
+  display: inline-block;
+
+  margin-right: 5px;
+
+  text-align: end;
+}
+.rightContainer {
+  position: absolute;
+  right: 10px;
+  bottom: 0;
+
+  margin-left: auto;
+}
+.info {
+  display: -webkit-box;
+}
+
+.catHref {
+  height: fit-content;
+}
+body {
+  overflow-x: hidden;
+}
+#catContainer {
+  width: 100%;
+  height: fit-content;
+  margin-top: 20px;
+
+  transition: 0.5s;
+
+  white-space: nowrap;
+}
+
+.catCard {
+  display: inline-block;
+
+  width: 320px;
+
+  height: 240px;
+
+  margin: 0 20px;
+
+  list-style: none;
+}
+
+.catInfo {
+  display: none;
+  overflow: hidden;
+
+  margin-left: 15px;
+
+  color: white;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+}
+
+.closeButton {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  display: block;
+
+  margin: 0 0 70px 0;
+
+  color: white;
+
+  font-size: 5rem;
+
+  text-align: right;
+
+  text-decoration: none;
+}
+
+.catName {
+  color: white;
+  font-size: 2em;
+
+  text-decoration: none;
+}
+.catName:active {
+  text-decoration: none;
+}
+
+.catInfoLine {
+  margin: var(--infoMargin);
+}
+.catImage {
+  display: block;
+
+  width: 100%;
+  height: 72%;
+  margin-top: 40px;
+
+  opacity: 0.7;
+}
+.catNameHover {
+  position: relative;
+  top: -50%;
+
+  visibility: hidden;
+
+  width: 100%;
+
+  color: white;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.catModHref {
+  display: none;
+
+  text-decoration: none;
+}
+
+.catModHref:active {
+  text-decoration: none;
+}
+
+.catModHref:hover .catImage {
+  -webkit-filter: brightness(40%);
+}
+.catModHref:hover .catNameHover {
+  visibility: visible;
+}
+
+.catCard:target {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 500;
+
+  display: -webkit-box;
+
+  overflow-y: auto;
+
+  width: 100%;
+  height: 100%;
+  margin: auto;
+
+  transition: 0.5s;
+
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.catCard:target > .catModHref .catNameHover {
+  visibility: hidden;
+}
+
+.catCard:target > .catHref {
+  display: none;
+}
+.catCard:target > .catModHref {
+  display: inline-block;
+
+  width: fit-content;
+  height: fit-content;
+}
+
+.catCard:target .catImage {
+  display: inline;
+
+  width: 640px;
+  height: 480px;
+  margin-left: 100px;
+
+  opacity: 1;
+}
+.catCard:target .catInfo {
+  display: block;
+
+  width: 400px;
+  height: 480px;
+  margin-top: auto;
+  margin-bottom: auto;
+
+  text-align: center;
+}
+
+/* Не знаю, как можно было сделать по другому */
+#cat1:target ~ #catContainer #catMod1 .catImage,
+#cat2:target ~ #catContainer #catMod2 .catImage,
+#cat3:target ~ #catContainer #catMod3 .catImage,
+#cat4:target ~ #catContainer #catMod4 .catImage,
+#cat5:target ~ #catContainer #catMod5 .catImage,
+#cat6:target ~ #catContainer #catMod6 .catImage {
+  height: 100%;
+  margin: 0;
+
+  opacity: 1;
+}
+#cat1:target ~ #catContainer #catMod1 .catHref,
+#cat2:target ~ #catContainer #catMod2 .catHref,
+#cat3:target ~ #catContainer #catMod3 .catHref,
+#cat4:target ~ #catContainer #catMod4 .catHref,
+#cat5:target ~ #catContainer #catMod5 .catHref,
+#cat6:target ~ #catContainer #catMod6 .catHref {
+  display: none;
+}
+#cat1:target ~ #catContainer #catMod1 .catModHref,
+#cat2:target ~ #catContainer #catMod2 .catModHref,
+#cat3:target ~ #catContainer #catMod3 .catModHref,
+#cat4:target ~ #catContainer #catMod4 .catModHref,
+#cat5:target ~ #catContainer #catMod5 .catModHref,
+#cat6:target ~ #catContainer #catMod6 .catModHref {
+  display: inline;
+}
+#cat1:target ~ #catContainer {
+  transform: translateX(40%);
+}
+
+#cat2:target ~ #catContainer {
+  transform: translateX(15%);
+}
+
+#cat3:target ~ #catContainer {
+  transform: translateX(-10%);
+}
+
+#cat4:target ~ #catContainer {
+  transform: translateX(-35%);
+}
+
+#cat5:target ~ #catContainer {
+  transform: translateX(-60%);
+}
+
+#cat6:target ~ #catContainer {
+  transform: translateX(-85%);
+}

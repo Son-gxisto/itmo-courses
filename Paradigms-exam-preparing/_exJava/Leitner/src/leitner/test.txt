@@ -1,0 +1,14 @@
+0
+apple яблоко
+roof крыша
+good хорошо
+1
+bad плохо
+final финал
+3
+key ключ
+man мужик
+5
+root корень
+keyboard клавиатура
+mouse мышь

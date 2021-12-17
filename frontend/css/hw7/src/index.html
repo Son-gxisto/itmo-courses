@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Morda</title>
+  <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+<!--TODO: для привлечения внимания-->
+<!--div .container здесь семантичный, т.к. выступает как контейнер-->
+
+<header>
+  <section class="location">
+    <h4 class="location__city">Екатеринбург</h4>
+  </section>
+  <div class="settings-container">
+    <section class="settings">
+      <h4 class="settings__title">Настройка</h4>
+      <ul class="settings-list">
+        <li><label>
+          <input type="checkbox"> Посещаемость
+        </label></li>
+      </ul>
+    </section>
+  </div>
+  <section class="user">
+    <h4 class="user__login">login</h4>
+    <p class="user__mail">Почта <span class="user-mail__cur">138</span></p>
+  </section>
+</header>
+<main>
+  <div class="cell c2 r1">
+    <section class="news">
+      <h4 class="title">Сейчас в СМИ</h4>
+      <ul class="news-list">
+        <li class="news__header">Doloribus ea iusto mollitia officia perspiciatis porro quam quis sapiente velit veritatis.</li>
+        <li class="news__header">Maxime minima placeat possimus quod voluptas! Dolor fugit nisi nostrum! </li>
+        <li class="news__header">Dolorum exercitationem hic in ipsam iusto laudantium libero.</li>
+        <li class="news__header">Adipisci at dolor doloribus ipsa modi, quaerat rem. Architecto dolorum exercitationem laudantium mollitia nemo sint veniam voluptatem!</li>
+        <li class="news__header">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, ullam.</li>
+      </ul>
+      <p class="news__val">USD ЦБ 59,18 <span class="news-val__info">-0,10</span></p>
+      <p class="news__val">EUR ЦБ 68,92 <span class="news-val__info">-0,06</span></p>
+      <p class="news__val">НЕФТЬ 63,44 <span class="news-val__info">-0,27%</span></p>
+    </section>
+    <section class="delivery">
+             <img src="img/monada.jpg" alt="Определение монады" class="delivery__image"/>
+      <h4 class="delivery__title">Акция!</h4>
+      <p class="delivery__description">Определение монады бесплатно и навсегда</p>
+    </section>
+  </div>
+  <div class="cell c1 r2">
+    <section class="yandex">
+      <h2 class="yandex-text">Яндекс</h2>
+    </section>
+  </div>
+  <!-- Я считаю, тут по 2 вложенных div семантично, т.к. для section и article нужен h, которого здесь нет -->
+  <div class="cell c2 r2">
+    <div class="search">
+      <ul class="search-list">
+        <li class="search-list__item">Видео</li>
+        <li class="search-list__item">Картинки</li>
+        <li class="search-list__item">Новости</li>
+        <li class="search-list__item">Карты</li>
+        <li class="search-list__item">Маркет</li>
+        <li class="search-list__item">Переводчик</li>
+        <li class="search-list__item">Музыка</li>
+        <li class="search-list__item">ещё</li>
+      </ul>
+      <form class="search-bar">
+        <div class="search-bar-container n1">
+          <label class="search-bar__label">
+            <input type="text" class="search-bar__input"/>
+          </label>
+        </div>
+        <div class="search-bar-container n2">
+          <button class="search-bar__button">Найти</button>
+        </div>
+      </form>
+      <div class="search-bar-container n3">
+        <p class="search-bar__prefix">Найдётся всё. Например, <span class="search-bar__example"> я достаю из широких штанин</span></p>
+      </div>
+      <div class="search-bar-container n4">
+        <img src="img/add.jpg" alt="web course add" class="search-bar__image"/>
+      </div>
+    </div>
+  </div>
+  <div class="cell c2 r3">
+    <div class="column n1">
+      <section class="info-block">
+        <h3 class="info-block__title">Посещаемое</h3>
+        <p class="info-block__item"><span class="info-block__first-word">Маркет</span> - мерч кт</p>
+        <p class="info-block__item"><span class="info-block__first-word">Авто.ру</span> - авто преподов кт</p>
+        <p class="info-block__item"><span class="info-block__first-word">Недвижимость</span> - Георгий Корнеев</p>
+        <p class="info-block__item"><span class="info-block__first-word">Работа</span> - Серокел</p>
+        <p class="info-block__item"><span class="info-block__first-word">Здоровье</span> - академ</p>
+        <p class="info-block__item"><span class="info-block__first-word">Коллекции</span> - 3я лекция Java Advanced</p>
+        <p class="info-block__item"><span class="info-block__first-word">Авиабилеты</span> - в Питер</p>
+      </section>
+      <section class="info-block">
+        <h3 class="info-block__title">Лучшие анекдоты</h3>
+        <div class="jokes__href" id="href1"></div>
+        <div class="jokes__href" id="href2"></div>
+        <div class="jokes__href" id="href3"></div>
+        <div class="jokes__href" id="href4"></div>
+        <div class="jokes__href" id="href5"></div>
+        <ul class="jokes">
+          <li class="jokes-item" id="n1">Как-то раз пришли два ктшника в бар, и тут</li>
+          <li class="jokes-item" id="n2">Заползает улитка в бар и говорит:</li>
+          <li class="jokes-item" id="n3">Корнеев со Станкевичем как-то раз поспорили, что</li>
+          <li class="jokes-item" id="n4">Быстрый Гонзалес потушил свечку</li>
+          <li class="jokes-item" id="n5">Чтобы медведь, сев в машину, не сгорел</li>
+        </ul>
+        <a class="next__joke" href="#href2">Показать ещё</a>
+        <a class="next__joke" href="#href3">Показать ещё</a>
+        <a class="next__joke" href="#href4">Показать ещё</a>
+        <a class="next__joke" href="#href5">Показать ещё</a>
+        <a class="next__joke" href="#href1">Показать ещё</a>
+      </section>
+    </div>
+    <div class="column n2">
+      <section class="info-block">
+        <h3 class="info-block__title">Телепрограмма</h3>
+        <p class="info-block__item"> 10:00 Пресс качат <span class="info-block__description">дома</span></p>
+        <p class="info-block__item"> 10:30 Бегит <span class="info-block__description">на улице</span></p>
+        <p class="info-block__item"> 11:00 Турник <span class="info-block__description">на улице</span></p>
+        <p class="info-block__item"> 11:30 Анжуманя <span class="info-block__description">дома</span></p>
+      </section>
+      <section class="info-block car">
+        <h3 class="info-block__title">Автомобильные новости</h3>
+        <ul class="info-block-car">
+          <li class="info-block-car__item"> Сидит мужик в пробке. Посмотрел назад, а там...</li>
+          <li class="info-block-car__item"> Сидит мужик в пробке. Посмотрел назад, а там...</li>
+          <li class="info-block-car__item"> Сидит мужик в пробке. Посмотрел назад, а там...</li>
+          <li class="info-block-car__item"> Сидит мужик в пробке. Посмотрел назад, а там...</li>
+          <li class="info-block-car__item"> Сидит мужик в пробке. Посмотрел назад, а там...</li>
+          <li class="info-block-car__item"> Сидит мужик в пробке. Посмотрел назад, а там...</li>
+          <li class="info-block-car__item"> Сидит мужик в пробке. Посмотрел назад, а там...</li>
+          <li class="info-block-car__item"> Сидит мужик в пробке. Посмотрел назад, а там...</li>
+          <li class="info-block-car__item"> Сидит мужик в пробке. Посмотрел назад, а там...</li>
+          <li class="info-block-car__item"> Сидит мужик в пробке. Посмотрел назад, а там...</li>
+          <li class="info-block-car__item"> Сидит мужик в пробке. Посмотрел назад, а там...</li>
+          <li class="info-block-car__item"> Сидит мужик в пробке. Посмотрел назад, а там...</li>
+          <li class="info-block-car__item"> Сидит мужик в пробке. Посмотрел назад, а там...</li>
+          <li class="info-block-car__item last"> армяне в нарды играют</li>
+        </ul>
+
+      </section>
+    </div>
+    <div class="column n3">
+      <section class="info-block">
+        <h3 class="info-block__title">Экзамен &#128514;</h3>
+        <p class="info-block__item"> Не компилируется -10, списано -20</p>
+      </section>
+      <section class="info-block">
+        <h3 class="info-block__title">Сдача фп</h3>
+        <p class="info-block__item"> Местами затруднения</p>
+      </section>
+      <section class="info-block map">
+        <h3 class="info-block__title">Карта Екатеринбурга</h3>
+        <div class="info-block-content">
+          <p class="info-block__item">Такси</p>
+          <p class="info-block__item">Расписания</p>
+          <p class="info-block__item">Междугородние автобусы</p>
+        </div>
+      </section>
+      <section class="info-block">
+        <h3 class="info-block__title">Расписание</h3>
+        <p class="info-block__item"> Фп <span class="info-block__description">лекция</span></p>
+        <p class="info-block__item"> JA <span class="info-block__description">лекция</span></p>
+        <p class="info-block__item"> МТ <span class="info-block__description">лекция</span></p>
+        <p class="info-block__item"> Андан <span class="info-block__description">практика</span></p>
+      </section>
+    </div>
+
+  </div>
+</main>
+
+</body>
+</html>
